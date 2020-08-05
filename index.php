@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE HTML>
 <HTML>
     <HEAD>
@@ -6,6 +9,7 @@
         <link type="text/css" href="./styles/main.css" rel="stylesheet">
         <link type="text/css" href="./styles/home.css" rel="stylesheet">
         <link rel="icon" href="./img/logo.png">
+        <script src='scripts/jsfunctions.js'></script>
     </HEAD>
     <BODY>
         <div id="container">
@@ -18,9 +22,38 @@
                         <li><a href="#top">Home</a></li>
                         <li><a href="#news-container">News</a></li>
                         <li><a href="#about-us">About Us</a></li>
-                        <div id="sign-in-button">
-                            <li><a href="">Sign In</a></li>
-                        </div>
+                        
+                        <?php
+                        //USER PANEL SWITCH WITH SIGN IN BUTTON
+                            if(isset($_SESSION['SignedIn'])&&$_SESSION['SignedIn'])
+                            {
+                                require 'scripts/functions.php';    //including functions folder
+                                $db = connect_to_db();              //connecting to database
+
+                                $LogOut = 'scripts/logout.php?token='.$_SESSION["SessionToken"].'';     //LOGOUT
+
+                                //USER NAME
+                                //USER NAME ID => 'sign-in-user'
+                                echo '<div id="sign-in-user" onclick="showUserPanel(`signed-in-user-panel`)">   
+                                        <li><button>'.getUserName($_SESSION['UserId'],$db).'</button></li>
+                                      </div>';  //GETTING USER NAME BY getUserName(userId, connection) function.
+                                
+                                //USER PANEL
+                                echo '<div id="signed-in-user-panel" style="display: none">
+                                        <ul>
+                                            <li><a href="'.$LogOut.'">Log Out</a></li>
+                                        </ul>
+                                      </div>';
+                                
+                            }else
+                            {   //SIGN IN ID => 'sign-in-button'
+                                echo '<div id="sign-in-button">
+                                        <li><a href="./sites/signIn.php">Sign In</a></li>
+                                      </div>';
+                            }
+                            
+                        ?>
+                        
                     </ul>
                 </nav>
             </div>
