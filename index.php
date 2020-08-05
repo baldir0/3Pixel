@@ -122,7 +122,7 @@ vehicula feugiat nibh ut, scelerisque lacinia lectus.</p>
                 <footer>
                     <span>© 2020 - 3 Pixel Team</span>
                     <div class="logo">
-                        <a href="#top"><img src="./img/logo.png" alt="img" id="#top"></a>
+                        <a href="#top"><img src="./img/logo.png" alt="img"></a>
                     </div>
                 </footer>
             </div>
