@@ -16,7 +16,7 @@
             <div id="nav-bar">
                 <nav>
                     <div class="logo">
-                        <img src="./img/logo.png" alt="Image Logo">
+                        <a href="index.php"><img src="./img/logo.png" alt="Image Logo"></a>
                     </div>
                     <ul>
                         <li><a href="#top">Home</a></li>
@@ -122,7 +122,7 @@ vehicula feugiat nibh ut, scelerisque lacinia lectus.</p>
                 <footer>
                     <span>© 2020 - 3 Pixel Team</span>
                     <div class="logo">
-                        <img src="./img/logo.png" alt="img">
+                        <a href="#top"><img src="./img/logo.png" alt="img" id="#top"></a>
                     </div>
                 </footer>
             </div>
