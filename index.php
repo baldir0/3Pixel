@@ -60,13 +60,13 @@
             <div id="main-container">
                 <div id="ImageBoard">
                     <div class='ImageBoardImage'>
-
+                            <img src="./img/ImageBoardImage1.png" alt="ImageBoard Image" id="BoardImg"/>
                     </div>
                     <div id="ImageBoardButtons">
-                        <button id="Img1"></button>
-                        <button id="Img2"></button>
-                        <button id="Img3"></button>
-                        <button id="Img4"></button>
+                        <button id="Img1" onclick='changeImage("BoardImg","./img/ImageBoardImage1.png")'></button>
+                        <button id="Img2" onclick='changeImage("BoardImg","./img/ImageBoardImage2.png")'></button>
+                        <button id="Img3" onclick='changeImage("BoardImg","./img/ImageBoardImage3.png")'></button>
+                        <button id="Img4" onclick='changeImage("BoardImg","./img/ImageBoardImage4.png")'></button>
                     </div>
                 </div>
                 <div id="about-us">

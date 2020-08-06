@@ -6,3 +6,8 @@ function showUserPanel($targetId)
 
     displayValue=='none' ? target.style.display='block' : target.style.display = 'none';    //CHANGE DISPLAY VALUE
 }
+
+function changeImage(target, src)
+{
+    document.getElementById(target).src = src;
+}
