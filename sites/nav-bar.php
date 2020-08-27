@@ -8,10 +8,10 @@
             <a href="/index.php#top"><li>Home</li></a>
             <a href="/index.php#news-container"><li>News</li></a>
             <a href="/index.php#about-us"><li>About Us</li></a>
-            <a href="/index.php#games"><li>Games</li></a>
+            <a href="/sites/games.php"><li>Games</li></a>
             <a href="/index.php#forum"><li>Forum</li></a>
             <a href="/index.php#about-us"><li>Chat</li></a>
-                        
+
             <?php
             // ▼ Navigation Bar User Panel ▼
             if(isset($_SESSION['SignedIn'])&&$_SESSION['SignedIn'])
@@ -42,17 +42,17 @@
                 echo '</ul>';
                 echo '</div>';
                 echo '</div>';
-                                
+
             }
             // ▼ Navigation Bar Sign In Button ▼
             else
-            { 
+            {
                 echo '<a href="/sites/signIn.php" id="sign-in-button-a"><div id="sign-in-button">';
                 echo '<li>Sign In</li>';
                 echo '</div></a>';
                 echo '</ul>';
-            }              
+            }
         ?>
-                        
+
     </ul>
 </nav>

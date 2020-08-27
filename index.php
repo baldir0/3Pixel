@@ -5,7 +5,6 @@
 <!DOCTYPE HTML>
 <HTML>
     <HEAD>
-      testing
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
@@ -24,7 +23,7 @@
             <div id="main-container">
                 <div id="ImageBoard">
                     <div class='ImageBoardImage'>
-                            <a href="#link1" id="BoardImgLink"><img src="/img/ImageBoardImage1.png" alt="ImageBoard Image" id="BoardImg"/></a>
+                        <a href="#link1" id="BoardImgLink"><img src="/img/ImageBoardImage1.png" alt="ImageBoard Image" id="BoardImg"/></a>
                     </div>
                     <div id="ImageBoardButtons">
                         <button id="Img1" class="active" onclick='changeImage("BoardImg","./img/ImageBoardImage1.png","#Img1")'></button>
