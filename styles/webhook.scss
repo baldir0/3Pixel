@@ -1,0 +1,216 @@
+#main-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    background: #0C0C0C;
+    border: 2px solid black;
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 50px;
+}
+
+#form-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#msg-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px;
+
+    input,textarea{
+        display: flex;
+        flex-direction: column;
+
+        height: 36px;
+        font-size: 26px;
+        margin: 10px;
+        text-align: center;
+        color: black;
+        border-radius: 10px;
+        border: none;
+
+        resize: none;
+        width: 100%;
+    }
+
+    textarea{
+        height: 36px*5;
+    }
+
+    input[type=submit]
+        {
+            background: #0094FF;
+            border: none;
+            border-radius: 10px;
+            width: fit-content;
+            height: auto;
+            margin: auto;
+            margin-top: 10px;
+            color: white;
+            padding: 5px 10px;
+        }
+}
+
+#embed-container form
+{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px;
+
+    input,textarea{
+        display: flex;
+        flex-direction: column;
+
+        height: 36px;
+        font-size: 26px;
+        margin: 10px;
+        text-align: center;
+        color: black;
+        border-radius: 10px;
+        border: none;
+
+        resize: none;
+        width: 100%;
+    }
+
+    textarea{
+        height: 36px*5;
+    }
+
+    input[type=submit]
+        {
+            background: #0094FF;
+            border: none;
+            border-radius: 10px;
+            width: fit-content;
+            height: auto;
+            margin: auto;
+            margin-top: 10px;
+            color: white;
+            padding: 5px 10px;
+        }
+}
+
+//PHONE
+
+@media only screen and (max-width: 1000px)
+{
+    #main-container{
+        display: flex;
+        flex-direction: column;
+        width: 40%*2;
+        margin: auto;
+        background: #0C0C0C;
+        border: 2px solid black;
+        font-size: 30px*2;
+        font-weight: lighter;
+        margin-top: 50px;
+    }
+    
+    #form-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #msg-container form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px;
+    
+        input,textarea{
+            display: flex;
+            flex-direction: column;
+    
+            height: 36px*2;
+            font-size: 26px*2;
+            margin: 10px*2;
+            text-align: center;
+            color: black;
+            border-radius: 10px;
+            border: none;
+    
+            resize: none;
+            width: 100%;
+        }
+    
+        textarea{
+            height: 36*2px*5;
+        }
+    
+        input[type=submit]
+            {
+                background: #0094FF;
+                border: none;
+                border-radius: 10px;
+                width: 100%;
+                align-items: center;
+                height: auto;
+                margin: auto;
+                margin-top: 10px;
+                color: white;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+    }
+    
+    #embed-container form
+    {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px;
+    
+        input,textarea{
+            display: flex;
+            flex-direction: column;
+    
+            height: 36px*2;
+            font-size: 26px*2;
+            margin: 10px;
+            text-align: center;
+            color: black;
+            border-radius: 10px;
+            border: none;
+    
+            resize: none;
+            width: 100%;
+        }
+    
+        textarea{
+            height: 36px*2*5;
+        }
+    
+        input[type=submit]
+            {
+                background: #0094FF;
+                border: none;
+                border-radius: 10px;
+                width: 100%;
+                align-items: center;
+                height: auto;
+                margin: auto;
+                margin-top: 10px;
+                color: white;
+                padding: 5px 10px;
+                cursor: pointer;
+            }
+    }
+}

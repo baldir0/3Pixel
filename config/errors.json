@@ -1,0 +1,18 @@
+{
+	"sign-in-login": "Login is required!",
+	"sign-in-password": "Password is required!",
+    "sign-in-failed": "Wrong Login or Password. Try again.",
+    
+    "sign-up-login": "Login is required!",
+    "sign-up-password": "Password is required!",
+    "sign-up-password-repeat": "Passwords are diffrent!",
+    "sign-up-email": "Email is required!",
+    "sign-up-email-already-used": "This email address is already used!",
+    "sign-up-login-already-used": "This login is already used!",
+    "sign-up-failed": "Could not register user!",
+
+    "password-requires-upperCase": "Password must contain upper Cases!",
+    "password-requires-lowerCase": "Password must contain lower Cases!",
+    "password-requires-numberCase": "Password must contain number Cases!",
+    "password-requires-lenght": "Password must be at least 8 characters long!"
+}
