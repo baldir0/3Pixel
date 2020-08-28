@@ -26,10 +26,10 @@
                         <a href="#link1" id="BoardImgLink"><img src="/img/ImageBoardImage1.png" alt="ImageBoard Image" id="BoardImg"/></a>
                     </div>
                     <div id="ImageBoardButtons">
-                        <button id="Img1" class="active" onclick='changeImage("BoardImg","./img/ImageBoardImage1.png","#Img1")'></button>
-                        <button id="Img2" onclick='changeImage("BoardImg","./img/ImageBoardImage2.png","#Img2")'></button>
-                        <button id="Img3" onclick='changeImage("BoardImg","./img/ImageBoardImage3.png","#Img3")'></button>
-                        <button id="Img4" onclick='changeImage("BoardImg","./img/ImageBoardImage4.png","#Img4")'></button>
+                        <button id="Img1" class="active" onclick='changeImage("BoardImg","./img/ImageBoardImage1.png","#Img1","#link1")'></button>
+                        <button id="Img2" onclick='changeImage("BoardImg","./img/ImageBoardImage2.png","#Img2","#link2")'></button>
+                        <button id="Img3" onclick='changeImage("BoardImg","./img/ImageBoardImage3.png","#Img3","#link3")'></button>
+                        <button id="Img4" onclick='changeImage("BoardImg","./img/ImageBoardImage4.png","#Img4","#link4")'></button>
                     </div>
                 </div>
                 <div id="about-us">

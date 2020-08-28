@@ -1,7 +1,7 @@
 <nav>
     <div class="logo">
         <!-- ▼ Logo ▼ -->
-        <a href="/index.php"><img src="/img/logo.png" alt="Image Logo"></a>
+        <a href="/index.php"><img src="/img/Logo-anim-1.gif" alt="Image Logo"></a>
     </div>
         <ul>
             <!-- ▼ Quick Select List ▼ -->
@@ -10,7 +10,7 @@
             <a href="/index.php#about-us"><li>About Us</li></a>
             <a href="/sites/games.php"><li>Games</li></a>
             <a href="/index.php#forum"><li>Forum</li></a>
-            <a href="/index.php#about-us"><li>Chat</li></a>
+            <a href="/index.php#chat"><li>Chat</li></a>
 
             <?php
             // ▼ Navigation Bar User Panel ▼

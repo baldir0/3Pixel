@@ -7,7 +7,7 @@ function showUserPanel($targetId)
     return;
 }
 
-function changeImage(target, src, button)
+function changeImage(target, src, button, link)
 {
     document.getElementById(target).src = src;
     var but1 = document.querySelector('#Img1');
@@ -20,10 +20,13 @@ function changeImage(target, src, button)
     but3.className = "";
     but4.className = "";
 
+    var linkB = document.querySelector('#BoardImgLink');
+    linkB.setAttribute("href",link);
+
     var newButton = document.querySelector(button);
     newButton.className = "active";
 
-    
+
     return;
 }
 
@@ -35,7 +38,7 @@ function switchImage()
         var but4 = document.querySelector('#Img4');
         var imgB = document.querySelector('#BoardImg');
         var linkB = document.querySelector('#BoardImgLink');
-        
+
         var link = ['#link1','#link2','#link3','#link4'];
 
         var src = ['./img/ImageBoardImage1.png','./img/ImageBoardImage2.png','./img/ImageBoardImage3.png','./img/ImageBoardImage4.png'];
@@ -47,7 +50,7 @@ function switchImage()
                 but2.className="active"
                 imgB.src = src[1];
                 linkB.setAttribute("href",link[1]);
-                
+
             }else if(but2.className=="active")
             {
                 but2.classList="";

@@ -74,6 +74,7 @@ nav ul #sign-in-user button::after {
 nav .logo {
   flex: 3;
   display: flex;
+  flex-direction: row;
   align-items: center;
   position: relative;
 }
@@ -81,11 +82,12 @@ nav .logo {
 nav .logo::after {
   content: "3 Pixel";
   display: flex;
-  padding-left: 10px;
 }
 
+
 nav .logo img {
-  transform: scale(0.9);
+  height: 64px;
+  width: 128px;
 }
 
 nav #signed-in-user-panel {
@@ -205,6 +207,7 @@ nav #signed-in-user-panel ul li:hover {
     display: flex;
     align-items: center;
     position: relative;
+    flex-direction: column;
   }
   nav .logo::after {
     content: "3 Pixel";
@@ -212,7 +215,8 @@ nav #signed-in-user-panel ul li:hover {
     padding-left: 10px;
   }
   nav .logo img {
-    transform: scale(1);
+    height: 128px;
+    width: 256px;
   }
   nav #signed-in-user-panel {
     position: relative;
