@@ -1,7 +1,7 @@
 <nav>
     <div class="logo">
         <!-- ▼ Logo ▼ -->
-        <a href="/index.php"><img src="/img/Logo-anim-1.gif" alt="Image Logo"></a>
+        <a href="/index.php"><img src="/img/Logo-anim-1.gif" alt="Image Logo"><span>3 Pixel</span></a>
     </div>
         <ul>
             <!-- ▼ Quick Select List ▼ -->
@@ -23,11 +23,11 @@
                 $LogOut = '/scripts/logout.php?token='.$_SESSION["SessionToken"].'';
                 $WebHook = '/sites/webhooks.php';
                 // ===▼ User Panel - Button ▼===
-                echo '<div id="sign-in-user" onmouseenter="showUserPanel(`signed-in-user-panel`)" onmouseleave="showUserPanel(`signed-in-user-panel`)">';
-                echo '<li><button>'.getUserName($_SESSION['UserId'],$db).'</button></li>';
+                echo '<div id="SinUser" onmouseenter="showUserPanel(`.UserPanel`)" onmouseleave="showUserPanel(`.UserPanel`)">';
+                echo '<li>'.getUserName($_SESSION['UserId'],$db).'</li>';
                 // ===▼ User Panel - List ▼===
-                echo '<div id="signed-in-user-panel" style="display: none">';
-                echo '<ul id="signed-in-user-panel-ul">';
+                echo '<div class="UserPanel" style="display: none">';
+                echo '<ul>';
                 // ======▼ Link List ▼======
                 // =========▼ Administrator Permission ▼=========
                 $stmt = $db->query('Select permission_lvl From permissions INNER JOIN users ON permissions.id=users.permission_id WHERE users.id ="'.$_SESSION['UserId'].'"');
@@ -47,7 +47,7 @@
             // ▼ Navigation Bar Sign In Button ▼
             else
             {
-                echo '<a href="/sites/signIn.php" id="sign-in-button-a"><div id="sign-in-button">';
+                echo '<a href="/sites/signIn.php" id="SinBut"><div>';
                 echo '<li>Sign In</li>';
                 echo '</div></a>';
                 echo '</ul>';

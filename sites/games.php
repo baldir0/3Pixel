@@ -3,8 +3,8 @@
     session_start();
 ?>
 <!DOCTYPE HTML>
-<HTML>
-    <HEAD>
+<html>
+    <head>
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
@@ -12,8 +12,8 @@
         <link type="text/css" href="/styles/navbar.css" rel="stylesheet">
         <link type="text/css" href="/styles/games.css" rel="stylesheet">
         <link rel="icon" href="/img/logo.png">
-    </HEAD>
-    <BODY>
+    </head>
+    <body>
         <div id="nav-bar">
             <?php
                 include_once("nav-bar.php");
@@ -41,5 +41,5 @@
               include_once("footer.php");
         ?>
         </div>
-    </BODY>
-</HTML>
+    </body>
+</html>

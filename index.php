@@ -3,43 +3,44 @@
     session_start();
 ?>
 <!DOCTYPE HTML>
-<HTML>
-    <HEAD>
+<html>
+    <head>
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
-        <link type="text/css" href="/styles/home.css" rel="stylesheet">
+        <link type="text/css" href="/styles/index.css" rel="stylesheet">
         <link type="text/css" href="/styles/navbar.css" rel="stylesheet">
+        <link type="text/css" href="/styles/footer.css" rel="stylesheet">
         <link rel="icon" href="/img/logo.png">
         <script src='scripts/jsfunctions.js'></script>
-    </HEAD>
-    <BODY onload="switchImage()">
-        <div id="nav-bar">
+    </head>
+    <body>
+        <div class="nav-bar">
             <?php
                 include_once("sites/nav-bar.php");
             ?>
         </div>
-        <div id="container">
-            <div id="main-container">
-                <div id="ImageBoard">
-                    <div class='ImageBoardImage'>
-                        <a href="#link1" id="BoardImgLink"><img src="/img/ImageBoardImage1.png" alt="ImageBoard Image" id="BoardImg"/></a>
+        <div class="container">
+            <div>
+                <div class="ImbB">
+                    <div>
+                        <a href="#link1"><img src="/img/ImageBoardImage1.png" alt="ImageBoard Image"/></a>
                     </div>
                     <div id="ImageBoardButtons">
-                        <button id="Img1" class="active" onclick='changeImage("BoardImg","./img/ImageBoardImage1.png","#Img1","#link1")'></button>
-                        <button id="Img2" onclick='changeImage("BoardImg","./img/ImageBoardImage2.png","#Img2","#link2")'></button>
-                        <button id="Img3" onclick='changeImage("BoardImg","./img/ImageBoardImage3.png","#Img3","#link3")'></button>
-                        <button id="Img4" onclick='changeImage("BoardImg","./img/ImageBoardImage4.png","#Img4","#link4")'></button>
+                        <button class="active" onclick='changeImage("./img/ImageBoardImage1.png",this,"#link1")'></button>
+                        <button onclick='changeImage("./img/ImageBoardImage2.png",this,"#link2")'></button>
+                        <button onclick='changeImage("./img/ImageBoardImage3.png",this,"#link3")'></button>
+                        <button onclick='changeImage("./img/ImageBoardImage4.png",this,"#link4")'></button>
                     </div>
                 </div>
-                <div id="about-us">
+                <div class="AboutUsB">
                     <h3 id="about-us-title">About Us</h3>
                     <p id="about-us-text">We are group of people starting to build fast games or flash project games.
                     We are working in that games to filter out people we cant relay on and with people we can relay on start working bigger better and more stable games thoward building one day company and stay as employs.
                     As of now on game release we will all gain portfolio and letter of reccomendation by me.</p>
                 </div>
-                <div id="news-container">
-                    <h3 id="news-title">News</h3>
+                <div class="NewsB">
+                    <h3>News</h3>
                     <div class="news">
                         <div id="title-container">
                             <h2 id="title">Title</h2>
@@ -82,10 +83,10 @@ vehicula feugiat nibh ut, scelerisque lacinia lectus.</p>
                 </div>
             </div>
         </div>
-        <div id="footer">
+        <div class="footer">
         <?php
               include_once("sites/footer.php");
         ?>
         </div>
-    </BODY>
-</HTML>
+    </body>
+</html>

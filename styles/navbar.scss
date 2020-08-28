@@ -23,7 +23,7 @@ nav{
         align-items: center;
         a{
             &:hover{
-                text-decoration: underline; 
+                text-decoration: underline;
             }
         }
         #sign-in-button{
@@ -60,7 +60,7 @@ nav{
                 {
                     content: "▼";
                     font-size: 15px;
-                    padding-left: 5px; 
+                    padding-left: 5px;
                 }
             }
         }
@@ -92,7 +92,7 @@ nav{
         font-size: 20px;
         a{
             color: white;
-            width: 100%;    
+            width: 100%;
         }
 
         ul{
@@ -109,7 +109,7 @@ nav{
                 &::before
                 {
                     content: "► ";
-                    
+
                 }
 
                 &:hover
@@ -150,25 +150,25 @@ nav{
 
             list-style-type: none;
             justify-content: space-between;
-            
+
             align-items: center;
             padding: 10px;
 
-            
+
             li{
-                
+
 
                 padding: 20px;
                 text-align: center;
-                
-                
-                
-                
+
+
+
+
             }
             a{
                 flex: 0 0 33.333333%;
                 &:hover{
-                    text-decoration: underline; 
+                    text-decoration: underline;
                 }
             }
             #sign-in-button{
@@ -201,16 +201,16 @@ nav{
                     font-size: 40px;
                     color: white;
                     cursor: pointer;
-    
+
                     &:focus{
                         outline: none;
                     }
-    
+
                     &::after
                     {
                         content: "▼";
                         font-size: 15px;
-                        padding-left: 5px; 
+                        padding-left: 5px;
                     }
                 }
             }
@@ -228,7 +228,7 @@ nav{
                 transform: scale(1);
             }
         }
-    
+
         #signed-in-user-panel
         {
             position: relative;
@@ -236,18 +236,18 @@ nav{
             margin: 0;
             background: #0C0C0C;
             font-size: 40px;
-    
+
             a{
                 color: white;
-                width: 100%;    
+                width: 100%;
             }
-    
+
             ul{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 padding: 0px;
-                
+
                 li{
                     line-height: 20px;
                     border: 1px solid #1b1b1b;
@@ -257,9 +257,9 @@ nav{
                     &::before
                     {
                         content: "► ";
-                        
+
                     }
-    
+
                     &:hover
                     {
                         background: #1b1b1b;

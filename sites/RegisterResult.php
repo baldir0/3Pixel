@@ -5,8 +5,8 @@
 ?>
 
 <!DOCTYPE HTML>
-<HTML>
-    <HEAD>
+<html>
+    <head>
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="../styles/main.css" rel="stylesheet">
@@ -14,8 +14,8 @@
         <link type="text/css" href="../styles/signin.css" rel="stylesheet">
         <link rel="icon" href="../img/logo.png">
         <script src="../scripts/jsfunctions.js"></script>
-    </HEAD>
-    <BODY>
+    </head>
+    <body>
         <div id="container">
             <div id="nav-bar">
                 <nav>
@@ -46,5 +46,5 @@
                 </footer>
             </div>
         </div>
-    </BODY>
-</HTML>
+    </body>
+</html>

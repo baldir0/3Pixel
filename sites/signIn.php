@@ -11,8 +11,8 @@
 ?>
 
 <!DOCTYPE HTML>
-<HTML>
-    <HEAD>
+<html>
+    <head>
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
@@ -34,8 +34,8 @@
                 return;
             }
         </script>
-    </HEAD>
-    <BODY onload="form()">
+    </head>
+    <body onload="form()">
         <div id="nav-bar">
                 <?php
                     include_once("nav-bar.php");
@@ -48,7 +48,7 @@
                     <h3>Sign In</h3>
                     <form method="post">
                         <input type="text" name='sign-in-login' id="sign-in-login" placeholder="Login" <?php if(isset($_POST['sign-in-login'])) echo "value=".$_POST['sign-in-login']; ?> >
-                        <?php 
+                        <?php
                             if(isset($errors)){
                                 if(sizeof($errors)!=0){
                                     if(isset($errors['sign-in-login']))
@@ -57,7 +57,7 @@
                             }
                         ?>
                         <input type="password" name='sign-in-password' id="sign-in-password" placeholder="Password"/>
-                        <?php 
+                        <?php
                             if(isset($errors)){
                                 if(sizeof($errors)!=0){
                                     if(isset($errors['sign-in-password']))
@@ -74,7 +74,7 @@
                     <h3>Sign Up</h3>
                     <form method="post">
                         <input type="text" name='sign-up-login' id='sign-up-login' placeholder="Login" <?php if(isset($_POST['sign-up-login'])) echo "value=".$_POST['sign-up-login']; ?> >
-                        <?php 
+                        <?php
                             if(isset($errors)){
                                 if(sizeof($errors)!=0){
                                     if(isset($errors['sign-up-login']))
@@ -86,12 +86,12 @@
                             }
                         ?>
                         <input type="password" name='sign-up-password' id='sign-up-password' placeholder="Password"/>
-                        <?php 
+                        <?php
                             if(isset($errors)){
                                 if(sizeof($errors)!=0){
                                     if(isset($errors['sign-up-password']))
                                         echo $errors['sign-up-password'];
-                                    
+
                                     if(isset($errors['password-requires-upperCase']))
                                         echo $errors['password-requires-upperCase'];
 
@@ -107,7 +107,7 @@
                             }
                         ?>
                         <input type="password" name='sign-up-password-repeat' id='sign-up-password-repeat' placeholder="Repeat Password"/>
-                        <?php 
+                        <?php
                             if(isset($errors)){
                                 if(sizeof($errors)!=0){
                                     if(isset($errors['sign-up-password-repeat']))
@@ -116,7 +116,7 @@
                             }
                         ?>
                         <input type="email" name='sign-up-email' id='sign-up-email' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" <?php if(isset($_POST['sign-up-email'])) echo "value=".$_POST['sign-up-email']?> >
-                        <?php 
+                        <?php
                             if(isset($errors)){
                                 if(sizeof($errors)!=0){
                                     if(isset($errors['sign-up-email']))
@@ -131,13 +131,13 @@
                     </form>
                     <span id='signin'>Already have an account? Click here and <a href='#' onclick="changeObjectVisibility('signin-form-container','block','signup-form-container','none')">Sign In</a> now!</span>
                 </div>
-                
+
             </div>
         </div>
         <div id="footer">
         <?php
-              include_once("footer.php");  
+              include_once("footer.php");
             ?>
         </div>
-    </BODY>
-</HTML>
+    </body>
+</html>

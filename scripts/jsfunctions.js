@@ -1,103 +1,68 @@
-function showUserPanel($targetId)
+//User Menu
+function showUserPanel(target)
 {
-    var target = document.getElementById($targetId);   //TARGET TO VARIABLE
-    var displayValue = target.style.display;    //GETTING DISPLAY VALUE
+  var target = document.querySelector(target);
+  var displayValue = target.style.display;
 
-    displayValue=='none' ? target.style.display='block' : target.style.display = 'none';    //CHANGE DISPLAY VALUE
-    return;
+  displayValue=='none' ? target.style.display='block' : target.style.display = 'none';
 }
-
-function changeImage(target, src, button, link)
+//Change Image After button press
+function changeImage(src, button, link)
 {
-    document.getElementById(target).src = src;
-    var but1 = document.querySelector('#Img1');
-    var but2 = document.querySelector('#Img2');
-    var but3 = document.querySelector('#Img3');
-    var but4 = document.querySelector('#Img4');
+    document.querySelector('.ImbB > div:first-of-type img').src = src;  //Select <Img> element
 
-    but1.className = "";
-    but2.className = "";
-    but3.className = "";
-    but4.className = "";
+    //Clear Class from Buttons
+    var buttons =  document.querySelectorAll("#ImageBoardButtons > button")
+    buttons.forEach((item, i) => {
+      item.classList.remove("active");
+    });
 
-    var linkB = document.querySelector('#BoardImgLink');
+    //Change Link
+    var linkB = document.querySelector('.ImbB > div:first-of-type a');
     linkB.setAttribute("href",link);
 
-    var newButton = document.querySelector(button);
-    newButton.className = "active";
-
-
-    return;
+    //Add class to new active element
+    button.classList.add("active");
 }
 
 function switchImage()
 {
-        var but1 = document.querySelector('#Img1');
-        var but2 = document.querySelector('#Img2');
-        var but3 = document.querySelector('#Img3');
-        var but4 = document.querySelector('#Img4');
-        var imgB = document.querySelector('#BoardImg');
-        var linkB = document.querySelector('#BoardImgLink');
+    var interval = 10000; //Interval in ms
+    var buttons = document.querySelectorAll("#ImageBoardButtons > button"); //Select all Buttons
 
-        var link = ['#link1','#link2','#link3','#link4'];
+    var imgB = document.querySelector(".ImbB > div:first-of-type img"); //Select First <Img> element from ImageBoardImage class
+    var linkB = document.querySelector(".ImbB > div:first-of-type img");  //Select First <a> element from ImageBoardImage class
 
-        var src = ['./img/ImageBoardImage1.png','./img/ImageBoardImage2.png','./img/ImageBoardImage3.png','./img/ImageBoardImage4.png'];
+    var link = ['#link1','#link2','#link3','#link4']; //Array of links
 
-        setInterval(() => {
-            if(but1.className=="active")
-            {
-                but1.className="";
-                but2.className="active"
-                imgB.src = src[1];
-                linkB.setAttribute("href",link[1]);
+    var src = ['./img/ImageBoardImage1.png','./img/ImageBoardImage2.png','./img/ImageBoardImage3.png','./img/ImageBoardImage4.png'];  //array of images src.
 
-            }else if(but2.className=="active")
-            {
-                but2.classList="";
-                but3.className="active";
-                imgB.src = src[2];
-                linkB.setAttribute("href",link[2]);
+    var active = 0; //Active button number
+    setInterval(() => {
 
-            }else if(but3.className=="active")
-            {
-                but3.className="";
-                but4.className="active";
-                imgB.src = src[3];
-                linkB.setAttribute("href",link[3]);
-            }else if(but4.className=="active")
-            {
-                but4.className="";
-                but1.className="active";
-                imgB.src = src[0];
-                linkB.setAttribute("href",link[0]);
-            }
-        }, 10000);
+      buttons.forEach((button, i) => {
+        if(button.className == "active")
+        {
+          active = i;
+          return;
+        }
+      });
+
+      buttons[active].classList.remove("active"); //Clear Active button class
+      active+=1;  //Change active button number to next one
+      if(active>3) active = 0;  //If number is higer than 3 set it to 0
+      buttons[active].classList.add("active"); //Add active class to new button
+      imgB.src = src[active]; //Change Image Src.
+      linkB.setAttribute("href",link[active]) //Change Image Link
+    }, interval);
 }
+document.addEventListener('DOMContentLoaded',switchImage);
 
-function checkPasswords(firstId, secondId, messageBoxId)
-{
-    var passwordOne = document.getElementById(firstId).value;
-    var passwordTwo = document.getElementById(secondId).value;
-    var messageBox = document.getElementById(messageBoxId);
-    if(passwordOne == "") return;
-    if(passwordTwo == "") return;
-    if(passwordOne.localeCompare(passwordTwo))
-    {
-        messageBox.style = "display: block";
-    }else messageBox.style = "display: none";
-    return;
-}
 
-function showElement(id)
-{
-    document.getElementById(id).style = "display: block";
-}
-
-function changeObjectVisibility(firstObjectId, firstObjectDisplaySetting, secondObjectId, secondObjectDisplaySetting)
+function changeObjectVisibility(firstId, firstDisplay, secondId, secondDisplay)
 {
     document.getElementById(firstObjectId).style.display = firstObjectDisplaySetting;
     document.getElementById(secondObjectId).style.display = secondObjectDisplaySetting;
-    return;
 }
 
 function getCookie(name)
@@ -118,5 +83,29 @@ function getCookie(name)
             return c.substring(cname.length, c.length);
         }
     }
-    return 0;
 }
+
+
+//UNUSED For Now
+/*
+
+function checkPasswords(firstId, secondId, messageBoxId)
+{
+    var passwordOne = document.getElementById(firstId).value;
+    var passwordTwo = document.getElementById(secondId).value;
+    var messageBox = document.getElementById(messageBoxId);
+    if(passwordOne == "") return;
+    if(passwordTwo == "") return;
+    if(passwordOne.localeCompare(passwordTwo))
+    {
+        messageBox.style = "display: block";
+    }else messageBox.style = "display: none";
+    return;
+}
+
+function showElement(id)
+{
+    document.getElementById(id).style = "display: block";
+}
+
+*/

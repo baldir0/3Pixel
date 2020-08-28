@@ -9,8 +9,8 @@
 ?>
 
 <!DOCTYPE HTML>
-<HTML>
-    <HEAD>
+<html>
+    <head>
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
@@ -24,18 +24,18 @@
             {
                 document.getElementById('isembed').checked ? changeObjectVisibility("webhookform","none", "webhookembedform", "flex") : changeObjectVisibility("webhookform","flex", "webhookembedform", "none");
             }
-             
+
 
             </script>
-    </HEAD>
-    <BODY>
+    </head>
+    <body>
         <div id="container">
             <div id="nav-bar">
                 <?php
                     include_once("nav-bar.php");
                 ?>
             </div>
-            <div id="main-container"> 
+            <div id="main-container">
             <div id="form-container">
                 <div id="visiblity">
                     <label>Embed</label>
@@ -59,7 +59,7 @@
                             $_SESSION['webhook-err'] = NULL;
                         }
                     ?>
-                </div>     
+                </div>
                 <div id="embed-container">
                     <form action="/scripts/WebHookControler.php" method="POST" id="webhookembedform">
                         <h1>Embed</h1>
@@ -73,7 +73,7 @@
                         <input type="text" name="embed-avatarurl">
                         <label for="embed-link">Link </label>
                         <input type="link" name="embed-link">
-                        <input type="submit" name="embed-submit" value="Send">        
+                        <input type="submit" name="embed-submit" value="Send">
                     </form>
                     <?php
                         if(isset($_SESSION['webhook-err'])&&!empty($_SESSION['webhook-err']))
@@ -88,9 +88,8 @@
         </div>
         <div id="footer">
             <?php
-              include_once("footer.php");  
+              include_once("footer.php");
             ?>
         </div>
-    </BODY>
-</HTML>
-
+    </body>
+</html>
