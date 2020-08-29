@@ -1,4 +1,5 @@
-#signin-form-container {
+/*forms container*/
+.container > div > div {
   display: block;
   width: 40%;
   margin: auto;
@@ -10,11 +11,13 @@
   text-align: center;
 }
 
-#signin-form-container h3 {
+/*Forms container <h3>*/
+.container > div > div > h3 {
   font-size: 42px;
 }
 
-#signin-form-container form {
+/*Forms*/
+.container > div > div > form {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -23,7 +26,8 @@
   padding: 20px;
 }
 
-#signin-form-container form input {
+/*Inputs*/
+.container > div > div > form input {
   height: 36px;
   font-size: 26px;
   margin: 10px;
@@ -33,7 +37,8 @@
   border: none;
 }
 
-#signin-form-container form input[type=submit] {
+/*Submit*/
+.container > div > div > form input[type=submit] {
   background: #0094FF;
   border: none;
   border-radius: 10px;
@@ -45,196 +50,57 @@
   padding: 5px 10px;
 }
 
-#signin-form-container #signup {
+/*Text*/
+.container > div > div > span {
   display: block;
   margin: 10px;
   font-size: 15px;
 }
 
-#signin-form-container #signup a {
+.container > div > div > span > a {
   text-decoration: underline;
   color: #0094FF;
 }
 
-#signin-form-container .err {
+/*Errors*/
+.container .err {
   font-size: 15px;
   color: red;
 }
 
-#signup-form-container {
+.container .SupC{
   display: none;
-  width: 40%;
-  margin: auto;
-  background: #0C0C0C;
-  border: 2px solid black;
-  font-size: 30px;
-  font-weight: lighter;
-  margin-top: 50px;
-  text-align: center;
-}
-
-#signup-form-container h3 {
-  font-size: 42px;
-}
-
-#signup-form-container form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: auto;
-  padding: 20px;
-}
-
-#signup-form-container form input {
-  height: 36px;
-  font-size: 26px;
-  margin: 10px;
-  text-align: center;
-  color: black;
-  border-radius: 10px;
-  border: none;
-}
-
-#signup-form-container form input[type=submit] {
-  background: #0094FF;
-  border: none;
-  border-radius: 10px;
-  width: fit-content;
-  height: auto;
-  margin: auto;
-  margin-top: 10px;
-  color: white;
-  padding: 5px 10px;
-}
-
-#signup-form-container #signin {
-  display: block;
-  margin: 10px;
-  font-size: 15px;
-}
-
-#signup-form-container #signin a {
-  text-decoration: underline;
-  color: #0094FF;
-}
-
-#signup-form-container .err {
-  font-size: 15px;
-  color: red;
 }
 
 @media only screen and (max-width: 1000px) {
-  #signin-form-container {
-    display: block;
+  /*Forms Container*/
+  .container > div > div {
     width: 80%;
-    margin: auto;
-    background: #0C0C0C;
-    border: 2px solid black;
-    font-size: 30px;
-    font-weight: lighter;
-    margin-top: 50px;
-    text-align: center;
   }
-  #signin-form-container h3 {
+
+  /*Forms container <h3>*/
+  .container > div > div > h3 {
     font-size: 84px;
   }
-  #signin-form-container form {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
-    padding: 20px;
-  }
-  #signin-form-container form input {
+
+  /*Forms Inputs*/
+  .container > div > div > form input {
     height: 72px;
     font-size: 52px;
     margin: 20px;
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-    border: none;
   }
-  #signin-form-container form input[type=submit] {
-    background: #0094FF;
-    border: none;
-    border-radius: 10px;
-    width: fit-content;
-    height: auto;
-    margin: auto;
-    margin-top: 10px;
-    color: white;
-    padding: 5px 10px;
-  }
-  #signin-form-container #signup {
+
+  .container > div > div > span {
     display: block;
     margin: 10px;
     font-size: 30px;
     font-weight: bolder;
   }
-  #signin-form-container #signup a {
+  .container > div > div > span > a {
     text-decoration: underline;
     color: #0094FF;
   }
-  #signin-form-container .err {
-    font-size: 30px;
-    font-weight: bolder;
-    color: red;
-  }
-  #signup-form-container {
-    display: none;
-    width: 80%;
-    margin: auto;
-    background: #0C0C0C;
-    border: 2px solid black;
-    font-size: 60px;
-    font-weight: lighter;
-    margin-top: 50px;
-    text-align: center;
-  }
-  #signup-form-container h3 {
-    font-size: 84px;
-  }
-  #signup-form-container form {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: auto;
-    padding: 20px;
-  }
-  #signup-form-container form input {
-    height: 72px;
-    font-size: 52px;
-    margin: 20px;
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-    border: none;
-  }
-  #signup-form-container form input[type=submit] {
-    background: #0094FF;
-    border: none;
-    border-radius: 10px;
-    width: fit-content;
-    height: auto;
-    margin: auto;
-    margin-top: 10px;
-    color: white;
-    padding: 5px 10px;
-  }
-  #signup-form-container #signin {
-    display: block;
-    margin: 10px;
-    font-size: 30px;
-    font-weight: bolder;
-  }
-  #signup-form-container #signin a {
-    text-decoration: underline;
-    color: #0094FF;
-  }
-  #signup-form-container .err {
+  .container .err {
     font-size: 30px;
     font-weight: bolder;
     color: red;

@@ -67,7 +67,6 @@ nav > ul #SinBut {
 nav > ul > #SinUser {
   position: relative;
   padding: 5px 10px;
-  box-shadow: #0C0C0C;
   line-height: 27px;
   font-size: 20px;
   height: auto;
@@ -75,8 +74,7 @@ nav > ul > #SinUser {
   cursor: pointer;
 }
 
-nav > ul > #SinUser > li::after {
-  content: "▼";
+nav > ul > #SinUser > li > span {
   font-size: 15px;
   padding-left: 5px;
 }
@@ -119,122 +117,82 @@ nav > ul > #SinUser > li::after {
 }
 
 @media only screen and (max-width: 1000px) {
-  #nav-bar {
-    background: #0C0C0C;
-    border-bottom: 1px solid #444444;
-  }
+
   nav {
-    display: flex;
     flex-direction: column;
-    width: 90%;
-    padding: 2px 0px;
-    justify-content: space-between;
-    margin: auto;
-    align-items: center;
     font-size: 40px;
   }
-  nav ul {
-    flex-wrap: wrap;
-    flex-direction: row;
-    flex-grow: 1;
-    list-style-type: none;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  nav ul li {
-    padding: 20px;
-    text-align: center;
-  }
-  nav ul a {
-    flex: 0 0 33.333333%;
-  }
-  nav ul a:hover {
-    text-decoration: underline;
-  }
-  nav ul #sign-in-button {
-    background: #0094FF;
-    padding: 5px 10px;
-    border-radius: 12px;
-    line-height: 27px;
-    height: auto;
-    width: auto;
-  }
-  nav ul #sign-in-button a {
-    text-align: center;
-  }
-  nav ul #sign-in-button-a {
-    flex: 0 0 100%;
-    margin: auto;
-  }
-  nav ul #sign-in-user {
-    flex: 0 0 100%;
-    padding: 5px 10px;
-    box-shadow: #0C0C0C;
-    line-height: 27px;
-    height: auto;
-    width: auto;
-    position: relative;
-  }
-  nav ul #sign-in-user button {
-    background: none;
-    border: none;
-    line-height: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-  }
-  nav ul #sign-in-user button:focus {
-    outline: none;
-  }
-  nav ul #sign-in-user button::after {
-    content: "▼";
-    font-size: 15px;
-    padding-left: 5px;
-  }
-  nav .logo {
+  /*Navigation bar -> logo*/
+  nav > div {
     display: flex;
-    align-items: center;
-    position: relative;
     flex-direction: column;
   }
-  nav .logo::after {
-    content: "3 Pixel";
-    display: flex;
-    padding-left: 10px;
+
+  nav > div a {
+    flex-direction: column;
   }
-  nav .logo img {
+
+  nav > div img {
     height: 128px;
     width: 256px;
   }
-  nav #signed-in-user-panel {
+  /*Navigation bar -> menu*/
+  nav > ul {
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-grow: 1;
+    padding: 10px;
+  }
+  nav > ul li {
+    padding: 20px;
+    text-align: center;
+  }
+  nav > ul a {
+    flex: 0 0 33.333333%;
+  }
+
+  nav > ul #SinBut {
+    width: auto;
+    flex: 0 0 100%;
+    margin: auto;
+  }
+
+  nav > ul > #SinUser {
+    flex: 0 0 100%;
+    width: auto;
+    line-height: 40px;
+    font-size: 40px;
+  }
+
+  nav > ul > #SinUser > li > span {
+    font-size: 30px;
+  }
+
+  .UserPanel {
     position: relative;
     width: 100%;
     margin: 0;
     background: #0C0C0C;
     font-size: 40px;
   }
-  nav #signed-in-user-panel a {
-    color: white;
-    width: 100%;
-  }
-  nav #signed-in-user-panel ul {
+
+  .UserPanel > ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
   }
-  nav #signed-in-user-panel ul li {
+
+  .UserPanel > ul > a {
+    color: white;
+    width: 100%;
+  }
+
+  .UserPanel > ul > a > li {
     line-height: 20px;
     border: 1px solid #1b1b1b;
     border-collapse: collapse;
     width: 100%;
     padding: 30px;
-  }
-  nav #signed-in-user-panel ul li::before {
-    content: "► ";
-  }
-  nav #signed-in-user-panel ul li:hover {
-    background: #1b1b1b;
   }
 }

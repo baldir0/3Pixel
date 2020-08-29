@@ -1,4 +1,4 @@
-#main-container {
+.container {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -8,14 +8,15 @@
   font-size: 30px;
   font-weight: lighter;
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-#form-container {
+.container > div {
   display: flex;
   flex-direction: column;
 }
 
-#msg-container form {
+.container > div > div > form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +26,7 @@
   padding: 20px;
 }
 
-#msg-container form input, #msg-container form textarea {
+.container > div > div > form input, textarea {
   display: flex;
   flex-direction: column;
   height: 36px;
@@ -39,11 +40,11 @@
   width: 100%;
 }
 
-#msg-container form textarea {
+.container > div > div > form textarea {
   height: 180px;
 }
 
-#msg-container form input[type=submit] {
+.container > div > div > form input[type=submit] {
   background: #0094FF;
   border: none;
   border-radius: 10px;
@@ -53,138 +54,34 @@
   margin-top: 10px;
   color: white;
   padding: 5px 10px;
+  cursor: pointer;
 }
 
-#embed-container form {
+.container > div > div> .hidden {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  justify-content: space-between;
-  margin: auto;
-  padding: 20px;
-}
-
-#embed-container form input, #embed-container form textarea {
-  display: flex;
-  flex-direction: column;
-  height: 36px;
-  font-size: 26px;
-  margin: 10px;
-  text-align: center;
-  color: black;
-  border-radius: 10px;
-  border: none;
-  resize: none;
-  width: 100%;
-}
-
-#embed-container form textarea {
-  height: 180px;
-}
-
-#embed-container form input[type=submit] {
-  background: #0094FF;
-  border: none;
-  border-radius: 10px;
-  width: fit-content;
-  height: auto;
-  margin: auto;
-  margin-top: 10px;
-  color: white;
-  padding: 5px 10px;
 }
 
 @media only screen and (max-width: 1000px) {
-  #main-container {
-    display: flex;
-    flex-direction: column;
+  .container {
     width: 80%;
-    margin: auto;
-    background: #0C0C0C;
-    border: 2px solid black;
     font-size: 60px;
-    font-weight: lighter;
-    margin-top: 50px;
   }
-  #form-container {
-    display: flex;
-    flex-direction: column;
-  }
-  #msg-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    justify-content: space-between;
-    margin: auto;
-    padding: 20px;
-  }
-  #msg-container form input, #msg-container form textarea {
-    display: flex;
-    flex-direction: column;
+
+.container > div > div > form input, textarea {
     height: 72px;
     font-size: 52px;
     margin: 20px;
-    text-align: center;
-    color: black;
-    border-radius: 10px;
     border: none;
     resize: none;
     width: 100%;
   }
-  #msg-container form textarea {
+.container > div > div > form textarea {
     height: 360px;
   }
-  #msg-container form input[type=submit] {
-    background: #0094FF;
-    border: none;
-    border-radius: 10px;
+.container > div > div > form input[type=submit] {
     width: 100%;
     align-items: center;
-    height: auto;
     margin: auto;
     margin-top: 10px;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  #embed-container form {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    justify-content: space-between;
-    margin: auto;
-    padding: 20px;
-  }
-  #embed-container form input, #embed-container form textarea {
-    display: flex;
-    flex-direction: column;
-    height: 72px;
-    font-size: 52px;
-    margin: 10px;
-    text-align: center;
-    color: black;
-    border-radius: 10px;
-    border: none;
-    resize: none;
-    width: 100%;
-  }
-  #embed-container form textarea {
-    height: 360px;
-  }
-  #embed-container form input[type=submit] {
-    background: #0094FF;
-    border: none;
-    border-radius: 10px;
-    width: 100%;
-    align-items: center;
-    height: auto;
-    margin: auto;
-    margin-top: 10px;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
   }
 }

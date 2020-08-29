@@ -13,6 +13,7 @@
         <link type="text/css" href="/styles/footer.css" rel="stylesheet">
         <link rel="icon" href="/img/logo.png">
         <script src='scripts/jsfunctions.js'></script>
+        <script src='scripts/changeImage.js'></script>
     </head>
     <body>
         <div class="nav-bar">

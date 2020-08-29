@@ -16,35 +16,23 @@
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
-        <link type="text/css" href="/styles/home.css" rel="stylesheet">
+        <link type="text/css" href="/styles/index.css" rel="stylesheet">
         <link type="text/css" href="/styles/navbar.css" rel="stylesheet">
+        <link type="text/css" href="/styles/footer.css" rel="stylesheet">
         <link type="text/css" href="/styles/signin.css" rel="stylesheet">
         <link rel="icon" href="/img/logo.png">
         <script src="/scripts/jsfunctions.js"></script>
-
-        <script>
-            function form()
-            {
-                var cookie = getCookie('Form');
-                if(cookie==1)
-                {
-                    document.getElementById('signin-form-container').style.display = 'none';
-                    document.getElementById('signup-form-container').style.display = 'block';
-                }
-                return;
-            }
-        </script>
     </head>
     <body onload="form()">
-        <div id="nav-bar">
+        <div class="nav-bar">
                 <?php
                     include_once("nav-bar.php");
                 ?>
             </div>
-        <div id="container">
-            <div id="main-container">
+        <div class="container">
+            <div>
                 <!--Sign In Container-->
-                <div id="signin-form-container">
+                <div class="SinC">
                     <h3>Sign In</h3>
                     <form method="post">
                         <input type="text" name='sign-in-login' id="sign-in-login" placeholder="Login" <?php if(isset($_POST['sign-in-login'])) echo "value=".$_POST['sign-in-login']; ?> >
@@ -67,10 +55,10 @@
                         ?>
                         <input type="submit" value="Sign In" name="sign-in-button">
                     </form>
-                    <span id='signup'>Now Have account yet? <a href='#' onclick="changeObjectVisibility('signin-form-container','none','signup-form-container','block')">Sign Up</a> now!</span>
+                    <span id='signup'>Now Have account yet? <a href='#' onclick="changeObjectVisibility('.SinC','.SupC','block')">Sign Up</a> now!</span>
                 </div>
                 <!--Sign Up Container-->
-                <div id="signup-form-container">
+                <div class="SupC">
                     <h3>Sign Up</h3>
                     <form method="post">
                         <input type="text" name='sign-up-login' id='sign-up-login' placeholder="Login" <?php if(isset($_POST['sign-up-login'])) echo "value=".$_POST['sign-up-login']; ?> >
@@ -129,12 +117,12 @@
                         ?>
                         <input type="submit" value="Sign Up" name='sign-up-button'/>
                     </form>
-                    <span id='signin'>Already have an account? Click here and <a href='#' onclick="changeObjectVisibility('signin-form-container','block','signup-form-container','none')">Sign In</a> now!</span>
+                    <span id='signin'>Already have an account? Click here and <a href='#' onclick="changeObjectVisibility('.SupC','.SinC','block')">Sign In</a> now!</span>
                 </div>
 
             </div>
         </div>
-        <div id="footer">
+        <div class="footer">
         <?php
               include_once("footer.php");
             ?>

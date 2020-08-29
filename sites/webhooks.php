@@ -14,35 +14,27 @@
         <meta charset='utf-8'/>
         <title>3Pixel</title>
         <link type="text/css" href="/styles/main.css" rel="stylesheet">
-        <link type="text/css" href="/styles/home.css" rel="stylesheet">
+        <link type="text/css" href="/styles/index.css" rel="stylesheet">
         <link type="text/css" href="/styles/navbar.css" rel="stylesheet">
+        <link type="text/css" href="/styles/footer.css" rel="stylesheet">
         <link type="text/css" href="/styles/webhook.css" rel="stylesheet">
         <link rel="icon" href="/img/logo.png">
         <script src="/scripts/jsfunctions.js"></script>
-        <script>
-            function switchForm()
-            {
-                document.getElementById('isembed').checked ? changeObjectVisibility("webhookform","none", "webhookembedform", "flex") : changeObjectVisibility("webhookform","flex", "webhookembedform", "none");
-            }
-
-
-            </script>
     </head>
     <body>
-        <div id="container">
-            <div id="nav-bar">
+            <div class="nav-bar">
                 <?php
                     include_once("nav-bar.php");
                 ?>
             </div>
-            <div id="main-container">
-            <div id="form-container">
-                <div id="visiblity">
+            <div class="container">
+              <div>
+                <div>
                     <label>Embed</label>
                     <input type="checkbox" name="isEmbed" id="isembed" onchange='switchForm()'> <br>
                 </div>
-                <div id="msg-container">
-                    <form action="/scripts/WebHookControler.php" method="POST" id="webhookform">
+                <div>
+                    <form action="/scripts/WebHookControler.php" method="POST">
                         <h1>Msg</h1>
                         <label for="msg">Message</label>
                         <textarea type="text" name="msg"></textarea>
@@ -60,8 +52,8 @@
                         }
                     ?>
                 </div>
-                <div id="embed-container">
-                    <form action="/scripts/WebHookControler.php" method="POST" id="webhookembedform">
+                <div>
+                    <form action="/scripts/WebHookControler.php" method="POST" class="hidden">
                         <h1>Embed</h1>
                         <label for="embed-title">Title </label>
                         <input type="text" name="embed-title">
@@ -84,9 +76,8 @@
                     ?>
                 </div>
             </div>
-            </div>
         </div>
-        <div id="footer">
+        <div class="footer">
             <?php
               include_once("footer.php");
             ?>

@@ -1,6 +1,3 @@
-#container{
-
-}
 
 .gameContainer{
   width: 80%;
@@ -11,49 +8,39 @@
   clear: both;
   display: flex;
   flex-wrap: wrap;
-
+  text-align: right;
 }
 
-.gameContainer h1{
+.gameContainer > h1{
   font-size: 36px;
   flex-basis: 100%;
   padding: 20px;
-  
+
 }
 
-.gameContainer p{
+.gameContainer > p{
   flex-basis: 50%;
   font-size: 28px;
   padding: 10px;
 }
 
-.gameContainer img{
+.gameContainer > img{
   flex-basis: 50%;
   width: 40%;
   height: auto;
   border: 4px solid #000000;
 }
 
-#game1{
-  text-align: right;
-}
-
-#game2{
+.gameContainer:nth-of-type(2)
+{
   flex-direction: row-reverse;
   border: 1px solid #232323;
   background: #151515;
-}
-
-#game3{
-  text-align: right;
+  text-align: left;
 }
 
 @media only screen and (max-width:1000px)
 {
-  #container
-  {
-
-  }
 
   .gameContainer
   {
@@ -61,36 +48,27 @@
     flex-direction: column;
   }
 
-  .gameContainer h1
+  .gameContainer > h1
   {
     font-size: 72px;
-    text-align: left;
-  }
-
-  .gameContainer p
-  {
-    font-size: 56px;
     text-align: center;
   }
 
-  .gameContainer img
+  .gameContainer > p
+  {
+    font-size: 56px;
+    text-align: center;
+    margin: 40px 0px 40px 0px;
+  }
+
+  .gameContainer > img
   {
     width: 100%;
     height: auto;;
   }
 
-  #game1
-  {
-
-  }
-
-  #game2
+  .gameContainer:nth-of-type(2)
   {
     flex-direction: column;
-  }
-
-  #game3
-  {
-
   }
 }

@@ -1,4 +1,5 @@
 <nav>
+    <script src="/scripts/jsfunctions.js"></script>
     <div class="logo">
         <!-- ▼ Logo ▼ -->
         <a href="/index.php"><img src="/img/Logo-anim-1.gif" alt="Image Logo"><span>3 Pixel</span></a>
@@ -11,7 +12,6 @@
             <a href="/sites/games.php"><li>Games</li></a>
             <a href="/index.php#forum"><li>Forum</li></a>
             <a href="/index.php#chat"><li>Chat</li></a>
-
             <?php
             // ▼ Navigation Bar User Panel ▼
             if(isset($_SESSION['SignedIn'])&&$_SESSION['SignedIn'])
@@ -24,7 +24,7 @@
                 $WebHook = '/sites/webhooks.php';
                 // ===▼ User Panel - Button ▼===
                 echo '<div id="SinUser" onmouseenter="showUserPanel(`.UserPanel`)" onmouseleave="showUserPanel(`.UserPanel`)">';
-                echo '<li>'.getUserName($_SESSION['UserId'],$db).'</li>';
+                echo '<li>'.getUserName($_SESSION['UserId'],$db).'<span> ▼</span></li>';
                 // ===▼ User Panel - List ▼===
                 echo '<div class="UserPanel" style="display: none">';
                 echo '<ul>';
@@ -42,6 +42,8 @@
                 echo '</ul>';
                 echo '</div>';
                 echo '</div>';
+
+                $db = NULL;
 
             }
             // ▼ Navigation Bar Sign In Button ▼
