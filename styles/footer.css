@@ -3,10 +3,11 @@
   display: flex;
   position: relative;
   width: 100%;
-  background: #0C0C0C;
+  background: #0D0D0D;
   height: 136px;
   align-items: center;
   bottom: 0px;
+  border-top: 1px solid #595959;
 }
 
 footer {

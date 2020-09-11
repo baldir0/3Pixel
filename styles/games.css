@@ -1,27 +1,35 @@
 
 .gameContainer{
-  width: 80%;
-  padding: 10px;
+  width: 100%;
+  padding: 20px;
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   clear: both;
   display: flex;
   flex-wrap: wrap;
-  text-align: right;
+  text-align: center;
 }
 
-.gameContainer > h1{
+.gameContainer > a{
+  width: 100%;
+}
+
+.gameContainer > a:hover{
+  text-decoration: underline;
+}
+
+.gameContainer > a h1{
   font-size: 36px;
   flex-basis: 100%;
-  padding: 20px;
-
+  padding: 50px;
 }
 
 .gameContainer > p{
   flex-basis: 50%;
   font-size: 28px;
-  padding: 10px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .gameContainer > img{
@@ -34,9 +42,29 @@
 .gameContainer:nth-of-type(2)
 {
   flex-direction: row-reverse;
-  border: 1px solid #232323;
-  background: #151515;
-  text-align: left;
+  border: 1px solid #0D0D0D;
+  background: #D9D9D9;
+  text-align: center;
+  color: black;
+}
+
+.gameContainer:nth-of-type(2) a
+{
+  color: black;
+}
+
+.gameContainer:nth-of-type(4)
+{
+  flex-direction: row-reverse;
+  border: 1px solid #0D0D0D;
+  background: #D9D9D9;
+  text-align: center;
+  color: black;
+}
+
+.gameContainer:nth-of-type(4) a
+{
+  color: black;
 }
 
 @media only screen and (max-width:1000px)

@@ -1,33 +1,43 @@
 //Change Image After button press
-function changeImage(src, button, link)
+function changeImage(button)
 {
-    document.querySelector('.ImbB > div:first-of-type img').src = src;  //Select <Img> element
-
-    //Clear Class from Buttons
-    var buttons =  document.querySelectorAll("#ImageBoardButtons > button")
-    buttons.forEach((item, i) => {
-      item.classList.remove("active");
+    var images = document.querySelectorAll('.ImbB > div img');  //Select <Img> elements
+    var n = 0;
+    //clear Show class from Images
+    images.forEach((img, i) => {
+      if(img.classList.contains("show"))
+      {
+        img.classList.remove("show");
+      }
     });
 
-    //Change Link
-    var linkB = document.querySelector('.ImbB > div:first-of-type a');
-    linkB.setAttribute("href",link);
+    var buttons =  document.querySelectorAll("#ImageBoardButtons > button"); //Select <button> elements
+    //Clear Class from Buttons
+    buttons.forEach((item, i) => {
+      if(item.classList.contains("active"))
+        item.classList.remove("active");
 
+      if(item==button)
+      {
+        if(i>3) n=0;
+        else n = i;
+      }
+    });
+    console.log(n);
+    images.forEach((img, i) => {
+      if(i==n){
+        img.classList.add("show");
+      }
+    })
     //Add class to new active element
     button.classList.add("active");
 }
 
-function switchImage()
+function contententLoaded()
 {
-    var interval = 10000; //Interval in ms
-    var buttons = document.querySelectorAll("#ImageBoardButtons > button"); //Select all Buttons
-
-    var imgB = document.querySelector(".ImbB > div:first-of-type img"); //Select First <Img> element from ImageBoardImage class
-    var linkB = document.querySelector(".ImbB > div:first-of-type img");  //Select First <a> element from ImageBoardImage class
-
-    var link = ['#link1','#link2','#link3','#link4']; //Array of links
-
-    var src = ['./img/ImageBoardImage1.png','./img/ImageBoardImage2.png','./img/ImageBoardImage3.png','./img/ImageBoardImage4.png'];  //array of images src.
+    var interval = 10000; //Set Interval in ms
+    var buttons = document.querySelectorAll("#ImageBoardButtons > button"); //Select <button> elements
+    var images = document.querySelectorAll(".ImbB > div img");//Select <img> elements
 
     var active = 0; //Active button number
     setInterval(() => {
@@ -40,12 +50,29 @@ function switchImage()
         }
       });
 
+
+
       buttons[active].classList.remove("active"); //Clear Active button class
+      images[active].classList.remove("show");
+
       active+=1;  //Change active button number to next one
       if(active>3) active = 0;  //If number is higer than 3 set it to 0
+
       buttons[active].classList.add("active"); //Add active class to new button
-      imgB.src = src[active]; //Change Image Src.
-      linkB.setAttribute("href",link[active]) //Change Image Link
+      images[active].classList.add("show");
     }, interval);
+
+
+    //Other Events to work after page load
+    document.querySelector(".ImbB").addEventListener("mouseover", function() {
+      document.querySelector(".ImbB > div > div").style.height = '15px';
+    });
+
+    document.querySelector(".ImbB").addEventListener("mouseout", function() {
+      document.querySelector(".ImbB > div > div").style.height = '2px';
+    })
 }
-document.addEventListener('DOMContentLoaded',switchImage);
+
+
+
+document.addEventListener('DOMContentLoaded',contententLoaded);

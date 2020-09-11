@@ -11,6 +11,7 @@
         <link type="text/css" href="/styles/index.css" rel="stylesheet">
         <link type="text/css" href="/styles/navbar.css" rel="stylesheet">
         <link type="text/css" href="/styles/footer.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
         <link rel="icon" href="/img/logo.png">
         <script src='scripts/jsfunctions.js'></script>
         <script src='scripts/changeImage.js'></script>
@@ -25,13 +26,16 @@
             <div>
                 <div class="ImbB">
                     <div>
-                        <a href="#link1"><img src="/img/ImageBoardImage1.png" alt="ImageBoard Image"/></a>
-                    </div>
-                    <div id="ImageBoardButtons">
-                        <button class="active" onclick='changeImage("./img/ImageBoardImage1.png",this,"#link1")'></button>
-                        <button onclick='changeImage("./img/ImageBoardImage2.png",this,"#link2")'></button>
-                        <button onclick='changeImage("./img/ImageBoardImage3.png",this,"#link3")'></button>
-                        <button onclick='changeImage("./img/ImageBoardImage4.png",this,"#link4")'></button>
+                        <a href="/sites/game.php?id=1"><img class="show" src="/img/ImageBoardImage1.png" alt="ImageBoard Image"/></a>
+                        <a href="/sites/game.php?id=2"><img src="/img/ImageBoardImage2.png" alt="ImageBoard Image"/></a>
+                        <a href="/sites/game.php?id=3"><img src="/img/ImageBoardImage3.png" alt="ImageBoard Image"/></a>
+                        <a href="/sites/game.php?id=4"><img src="/img/ImageBoardImage4.png" alt="ImageBoard Image"/></a>
+                        <div id="ImageBoardButtons">
+                            <button class="active" onclick='changeImage("this")'></button>
+                            <button onclick='changeImage("this")'></button>
+                            <button onclick='changeImage("this")'></button>
+                            <button onclick='changeImage("this")'></button>
+                        </div>
                     </div>
                 </div>
                 <div class="AboutUsB">
