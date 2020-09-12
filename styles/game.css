@@ -1,0 +1,28 @@
+.container
+{
+  margin:auto;
+  width: 80%;
+}
+
+.title
+{
+  font-size: 36px;
+}
+
+.overlay
+{
+  font-size: 24px;
+  padding: 10px;
+}
+
+.overlay h3
+{
+  font-size: 28px;
+}
+
+.overlay p
+{
+  font-size: 20px;
+  text-align: left;
+  padding-bottom: 20px;
+}

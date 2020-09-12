@@ -31,20 +31,20 @@
                         <a href="/sites/game.php?id=3"><img src="/img/ImageBoardImage3.png" alt="ImageBoard Image"/></a>
                         <a href="/sites/game.php?id=4"><img src="/img/ImageBoardImage4.png" alt="ImageBoard Image"/></a>
                         <div id="ImageBoardButtons">
-                            <button class="active" onclick='changeImage("this")'></button>
-                            <button onclick='changeImage("this")'></button>
-                            <button onclick='changeImage("this")'></button>
-                            <button onclick='changeImage("this")'></button>
+                            <button class="active" onclick='changeImage(this)'><div></div></button>
+                            <button onclick='changeImage(this)'><div></div></button>
+                            <button onclick='changeImage(this)'><div></div></button>
+                            <button onclick='changeImage(this)'><div></div></button>
                         </div>
                     </div>
                 </div>
-                <div class="AboutUsB">
+                <div class="AboutUsB" id="about-us">
                     <h3 id="about-us-title">About Us</h3>
                     <p id="about-us-text">We are group of people starting to build fast games or flash project games.
                     We are working in that games to filter out people we cant relay on and with people we can relay on start working bigger better and more stable games thoward building one day company and stay as employs.
                     As of now on game release we will all gain portfolio and letter of reccomendation by me.</p>
                 </div>
-                <div class="NewsB">
+                <div class="NewsB" id="news">
                     <h3>News</h3>
                     <div class="news">
                         <div id="title-container">

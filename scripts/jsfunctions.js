@@ -56,6 +56,37 @@ function switchForm()
     }
 }
 
+var prev = 0;
+
+window.onscroll = function()
+{
+  //console.log("=====================SPACER============================")
+  //console.log("[DEBUG] prev. scroll location: "+ prev);
+
+  //console.log("[DEBUG] document.body.scrollTop: " + window.scrollY);
+  //console.log(document.querySelector("nav").clientHeight);
+  const navbar = document.querySelector(".nav-bar");
+  var actuall = window.scrollY;
+
+  //console.log("[DEBUG] Is actuall position lower than scroll height: " + actuall + " > " + navbar.clientHeight);
+  if(actuall > navbar.clientHeight){
+
+    //console.log("[DEBUG] Return: TRUE");
+    //console.log("[DEBUG] Is Prev. value lower than actuall: " + prev + " < " + window.scrollY);
+    if(prev < actuall)
+    {
+      //console.log("[DEBUG] Return: TRUE");
+      navbar.style.top = "-100px";
+    }else {
+      //console.log("[DEBUG] Return: FALSE");
+      navbar.style.top = "0px";
+    }
+  }
+  prev = actuall;
+  //console.log("=====================SPACER============================")
+}
+
+
 //UNUSED For Now
 /*
 

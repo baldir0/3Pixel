@@ -7,7 +7,7 @@
         <ul>
             <!-- ▼ Quick Select List ▼ -->
             <a href="/index.php#top"><li>Home</li></a>
-            <a href="/index.php#news-container"><li>News</li></a>
+            <a href="/index.php#news"><li>News</li></a>
             <a href="/index.php#about-us"><li>About Us</li></a>
             <a href="/sites/games.php"><li>Games</li></a>
             <a href="/index.php#forum"><li>Forum</li></a>

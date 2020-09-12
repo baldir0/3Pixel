@@ -11,7 +11,7 @@
         <link type="text/css" href="/styles/index.css" rel="stylesheet">
         <link type="text/css" href="/styles/navbar.css" rel="stylesheet">
         <link type="text/css" href="/styles/footer.css" rel="stylesheet">
-        <link type="text/css" href="/styles/games.css" rel="stylesheet">
+        <link type="text/css" href="/styles/game.css" rel="stylesheet">
         <link rel="icon" href="/img/logo.png">
     </HEAD>
     <BODY>
@@ -26,10 +26,13 @@
         </div>
         <div class="container">
             <div class="title">
+              <h1>
               <?php
                 echo $game->_getTitle();
                ?>
+             </h1>
             </div>
+            <hr>
             <div class="overlay">
               <?php
               echo $game->_getOverlay();
